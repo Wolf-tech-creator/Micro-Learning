@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title><%= course.title %> - Micro-Learning</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header>
+  <h1><%= course.title %></h1>
+  <nav>
+    Welcome, <strong><%= user.username %></strong> | 
+    <a href="/courses">Back to Courses</a> | 
+    <a href="/logout">Logout</a> | 
+    <a href="/">Home</a>
+  </nav>
+</header>
+<main>
+  <p><%= course.description %></p>
+  <section>
+    <h2>Start Learning</h2>
+    <p>This is the first lesson of <%= course.title %>. (Demo content.)</p>
+    <p>More lessons and interactive content coming soon!</p>
+  </section>
+</main>
+</body>
+</html>
