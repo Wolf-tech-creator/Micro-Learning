@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Courses - Micro-Learning</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header>
+  <h1>Available Courses</h1>
+  <nav>
+    Welcome, <strong><%= user.username %></strong> | 
+    <a href="/logout">Logout</a> | 
+    <a href="/">Home</a>
+  </nav>
+</header>
+<main>
+  <ul class="course-list">
+    <% courses.forEach(course => { %>
+      <li>
+        <h3><a href="/courses/<%= course.id %>"><%= course.title %></a></h3>
+        <p><%= course.description %></p>
+      </li>
+    <% }) %>
+  </ul>
+</main>
+</body>
+</html>
