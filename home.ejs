@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Micro-Learning Platform</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header>
+  <h1>Micro-Learning Platform</h1>
+  <nav>
+    <% if(user){ %>
+      Welcome, <strong><%= user.username %></strong> | 
+      <a href="/courses">Courses</a> | 
+      <a href="/logout">Logout</a>
+    <% } else { %>
+      <a href="/login">Login</a> | 
+      <a href="/signup">Sign Up</a>
+    <% } %>
+  </nav>
+</header>
+<main>
+  <h2>Learn quickly, anytime, anywhere</h2>
+  <p>Welcome to our micro-learning platform — bite-sized courses designed for fast, effective learning.</p>
+  <% if(!user){ %>
+    <p><a href="/signup" class="btn">Get Started</a></p>
+  <% } else { %>
+    <p><a href="/courses" class="btn">Browse Courses</a></p>
+  <% } %>
+</main>
+</body>
+</html>
